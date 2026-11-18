@@ -1,0 +1,150 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Order Confirmed | TechStore</title>
+
+    <link rel="stylesheet"
+          href="../css/checkout.css">
+
+    <style>
+
+        .confirmation {
+            max-width: 650px;
+            margin: 90px auto;
+            padding: 45px 30px;
+            text-align: center;
+            background: white;
+            border-radius: 18px;
+        }
+
+        .success-icon {
+            font-size: 65px;
+            margin-bottom: 20px;
+        }
+
+        .confirmation h1 {
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+
+        .confirmation p {
+            color: #64748b;
+            line-height: 1.8;
+            margin: 10px 0;
+        }
+
+        .order-info {
+            background: #eff6ff;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 25px 0;
+        }
+
+        .home-btn {
+            display: inline-block;
+            background: #2563eb;
+            color: white;
+            padding: 14px 25px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            margin-top: 15px;
+        }
+
+        @media(max-width: 600px) {
+            .confirmation {
+                margin: 40px 5%;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <header class="navbar">
+
+        <a href="../index.html" class="logo">
+            Tech<span>Store.</span>
+        </a>
+
+    </header>
+
+
+    <main class="confirmation">
+
+        <div class="success-icon">✅</div>
+
+        <h1>Order Placed Successfully!</h1>
+
+        <p>
+            Thank you for shopping with TechStore.
+            Your demo order has been recorded.
+        </p>
+
+        <div class="order-info">
+
+            <h3>Order Details</h3>
+
+            <p id="orderId"></p>
+
+            <p id="orderDate"></p>
+
+            <h2 id="orderTotal"></h2>
+
+            <p id="paymentMethod"></p>
+
+        </div>
+
+        <a href="../index.html" class="home-btn">
+            Continue Shopping →
+        </a>
+
+    </main>
+
+
+    <script>
+
+        const order = JSON.parse(
+            localStorage.getItem("latestOrder")
+        );
+
+        if (!order) {
+
+            document.querySelector(".confirmation").innerHTML = `
+                <h1>No Recent Order Found</h1>
+                <p>Please visit our store to start shopping.</p>
+                <a href="../index.html" class="home-btn">
+                    Go to Home
+                </a>
+            `;
+
+        } else {
+
+            document.getElementById("orderId").textContent =
+                "Order ID: " + order.orderId;
+
+            document.getElementById("orderDate").textContent =
+                "Date: " + order.date;
+
+            document.getElementById("orderTotal").textContent =
+                "Total: ₹" + order.total.toLocaleString("en-IN");
+
+            document.getElementById("paymentMethod").textContent =
+                "Payment: " + order.paymentMethod;
+
+        }
+
+    </script>
+
+</body>
+</html>

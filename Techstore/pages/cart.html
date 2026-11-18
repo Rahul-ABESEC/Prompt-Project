@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Shopping Cart | TechStore</title>
+
+    <link rel="stylesheet" href="../css/cart.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header class="cart-navbar">
+
+        <a href="../index.html" class="logo">
+            Tech<span>Store.</span>
+        </a>
+
+        <a href="../index.html" class="continue-shopping">
+            ← Continue Shopping
+        </a>
+
+    </header>
+
+
+    <!-- Main Cart Section -->
+    <main class="cart-container">
+
+        <div class="cart-heading">
+            <div>
+                <p class="eyebrow">YOUR SHOPPING BAG</p>
+                <h1>Shopping Cart</h1>
+            </div>
+
+            <p id="itemCount">0 Items</p>
+        </div>
+
+
+        <div class="cart-layout">
+
+            <!-- Cart Products -->
+            <section class="cart-products">
+
+                <div class="cart-products-header">
+                    <h3>Product Details</h3>
+                    <h3>Quantity</h3>
+                    <h3>Subtotal</h3>
+                </div>
+
+                <div id="cartItems">
+
+                    <!-- Products inserted through JavaScript -->
+
+                </div>
+
+            </section>
+
+
+            <!-- Order Summary -->
+            <aside class="order-summary">
+
+                <h2>Order Summary</h2>
+
+                <div class="summary-row">
+                    <span>Subtotal</span>
+                    <span id="subtotal">₹0</span>
+                </div>
+
+                <div class="summary-row">
+                    <span>Shipping</span>
+                    <span id="shipping">₹0</span>
+                </div>
+
+                <div class="summary-row total-row">
+                    <span>Total</span>
+                    <span id="total">₹0</span>
+                </div>
+
+                <p class="shipping-note">
+                    Free shipping on orders above ₹5,000.
+                </p>
+
+                <button id="checkoutBtn">
+                    Proceed to Checkout →
+                </button>
+
+                <a href="../index.html" class="continue-link">
+                    Continue Shopping
+                </a>
+
+            </aside>
+
+        </div>
+
+    </main>
+
+
+    <footer>
+        <p>© 2026 TechStore. All rights reserved.</p>
+    </footer>
+
+
+    <script src="../js/cart.js"></script>
+<div id="toast" class="toast"></div>
+</body>
+</html>

@@ -1,0 +1,277 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Checkout | TechStore</title>
+
+    <link rel="stylesheet"
+          href="../css/checkout.css">
+
+</head>
+
+<body>
+
+    <!-- Navbar -->
+
+    <header class="navbar">
+
+        <a href="../index.html" class="logo">
+            Tech<span>Store.</span>
+        </a>
+
+        <a href="cart.html" class="back-link">
+            ← Back to Cart
+        </a>
+
+    </header>
+
+
+    <main class="checkout-container">
+
+        <div class="heading">
+
+            <p class="eyebrow">ALMOST THERE</p>
+
+            <h1>Complete Your Order</h1>
+
+            <p>Enter your details to place your order.</p>
+
+        </div>
+
+
+        <div class="checkout-layout">
+
+
+            <!-- Customer Form -->
+
+            <section class="checkout-form">
+
+                <form id="checkoutForm">
+
+                    <h2>01. Contact Information</h2>
+
+                    <div class="input-group">
+
+                        <label for="name">Full Name</label>
+
+                        <input
+                            type="text"
+                            id="name"
+                            placeholder="Enter your full name"
+                            required
+                            minlength="3"
+                        >
+
+                    </div>
+
+
+                    <div class="input-row">
+
+                        <div class="input-group">
+
+                            <label for="email">Email Address</label>
+
+                            <input
+                                type="email"
+                                id="email"
+                                placeholder="example@email.com"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label for="phone">Phone Number</label>
+
+                            <input
+                                type="tel"
+                                id="phone"
+                                placeholder="10-digit mobile number"
+                                pattern="[6-9][0-9]{9}"
+                                maxlength="10"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <h2>02. Delivery Address</h2>
+
+
+                    <div class="input-group">
+
+                        <label for="address">House / Street Address</label>
+
+                        <input
+                            type="text"
+                            id="address"
+                            placeholder="Enter your address"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="input-row">
+
+                        <div class="input-group">
+
+                            <label for="city">City</label>
+
+                            <input
+                                type="text"
+                                id="city"
+                                placeholder="City"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label for="pincode">PIN Code</label>
+
+                            <input
+                                type="text"
+                                id="pincode"
+                                placeholder="6-digit PIN"
+                                pattern="[1-9][0-9]{5}"
+                                maxlength="6"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <h2>03. Payment Method</h2>
+
+
+                    <div class="payment-options">
+
+                        <label class="payment-card">
+
+                            <input
+                                type="radio"
+                                name="payment"
+                                value="COD"
+                                checked
+                            >
+
+                            <div>
+                                <strong>Cash on Delivery</strong>
+                                <p>Pay when your order arrives.</p>
+                            </div>
+
+                        </label>
+
+
+                        <label class="payment-card">
+
+                            <input
+                                type="radio"
+                                name="payment"
+                                value="UPI Demo"
+                            >
+
+                            <div>
+                                <strong>UPI Payment (Demo)</strong>
+                                <p>Demo selection only. No payment is processed.</p>
+                            </div>
+
+                        </label>
+
+                    </div>
+
+
+                    <label class="terms">
+
+                        <input type="checkbox" id="terms" required>
+
+                        I agree to the Terms and Conditions.
+
+                    </label>
+
+
+                    <button type="submit" id="placeOrderBtn">
+
+                        Place Order →
+
+                    </button>
+
+                    <p id="formMessage"></p>
+
+                </form>
+
+            </section>
+
+
+            <!-- Order Summary -->
+
+            <aside class="order-summary">
+
+                <h2>Your Order</h2>
+
+                <div id="checkoutItems"></div>
+
+                <div class="summary-row">
+
+                    <span>Subtotal</span>
+
+                    <span id="subtotal">₹0</span>
+
+                </div>
+
+
+                <div class="summary-row">
+
+                    <span>Shipping</span>
+
+                    <span id="shipping">₹0</span>
+
+                </div>
+
+
+                <div class="summary-row total">
+
+                    <span>Total</span>
+
+                    <span id="total">₹0</span>
+
+                </div>
+
+                <p class="secure-note">
+                    🔒 Demo checkout – no real payment is collected.
+                </p>
+
+            </aside>
+
+        </div>
+
+    </main>
+
+
+    <footer>
+
+        © 2026 TechStore. All rights reserved.
+
+    </footer>
+
+
+    <script src="../js/checkout.js"></script>
+
+</body>
+</html>

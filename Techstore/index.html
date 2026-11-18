@@ -1,0 +1,172 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechStore | Premium Electronics</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/shop.css">
+    <meta name="description"
+      content="Shop premium laptops, smartphones, headphones and accessories at TechStore.">
+
+<meta name="keywords"
+      content="electronics, laptops, smartphones, headphones, gadgets">
+
+<meta name="author" content="TechStore">
+
+<meta name="theme-color" content="#2563eb">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <a href="#" class="logo">Tech<span>Store.</span></a>
+
+        <nav id="mainNav">
+            <a href="#home">Home</a>
+            <a href="#categories">Categories</a>
+            <a href="#products">Products</a>
+            <a href="#about">About</a>
+            <button id="menuToggle" class="menu-toggle">
+    ☰
+</button>
+<a href="pages/orders.html">My Orders</a>
+        </nav>
+
+        <div class="nav-actions">
+
+            <button id="searchBtn" aria-label="Search">⌕</button>
+            <button id="clearSearch" type="button">
+    Clear Search
+</button>
+            <a href="pages/wishlist.html" aria-label="Wishlist">
+    ♡
+</a>
+           <a href="pages/cart.html" aria-label="Shopping cart">
+    🛒 <span id="cartCount">0</span>
+</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <p class="eyebrow">THE FUTURE IS HERE</p>
+
+                <h1>Upgrade Your<br>
+                    <span>Digital Lifestyle.</span>
+                </h1>
+
+                <p class="hero-description">
+                    Discover the latest technology, premium gadgets
+                    and accessories designed for your everyday life.
+                </p>
+
+                <a href="#products" class="primary-btn">
+                    Explore Products →
+                </a>
+            </div>
+
+            <div class="hero-image">
+                <img
+                    src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=900"
+                    alt="Premium laptop"
+                >
+            </div>
+        </section>
+
+        <!-- Categories -->
+        <section class="section" id="categories">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">EXPLORE COLLECTIONS</p>
+                    <h2>Shop By Category</h2>
+                </div>
+            </div>
+
+            <div class="category-grid">
+                <div class="category-card">
+                    <span>💻</span>
+                    <h3>Laptops</h3>
+                </div>
+
+                <div class="category-card">
+                    <span>📱</span>
+                    <h3>Smartphones</h3>
+                </div>
+
+                <div class="category-card">
+                    <span>🎧</span>
+                    <h3>Headphones</h3>
+                </div>
+
+                <div class="category-card">
+                    <span>⌨️</span>
+                    <h3>Accessories</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products -->
+       
+<section class="section" id="products">
+
+    <div class="section-heading">
+        <div>
+            <p class="eyebrow">OUR COLLECTION</p>
+            <h2>Explore Products</h2>
+        </div>
+    </div>
+
+    <!-- Search and Filters -->
+
+    <div class="filter-container">
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search products..."
+        >
+
+        <select id="categoryFilter">
+            <option value="all">All Categories</option>
+            <option value="electronics">Electronics</option>
+            <option value="jewelery">Jewellery</option>
+            <option value="men's clothing">Men's Clothing</option>
+            <option value="women's clothing">Women's Clothing</option>
+        </select>
+
+        <select id="sortFilter">
+            <option value="default">Sort By</option>
+            <option value="low">Price: Low to High</option>
+            <option value="high">Price: High to Low</option>
+            <option value="az">Name: A to Z</option>
+        </select>
+
+    </div>
+
+    <p id="productCount"></p>
+
+    <!-- Products will appear here -->
+
+    <div class="product-grid" id="productGrid">
+        <p>Loading products...</p>
+    </div>
+
+</section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer id="about">
+        <a href="#" class="logo">Tech<span>Store.</span></a>
+        <p>Technology that moves you forward.</p>
+        <p>© 2026 TechStore. All rights reserved.</p>
+    </footer>
+
+    <script src="js/app.js"></script>
+    <div id="toast" class="toast"></div>
+</body>
+</html>

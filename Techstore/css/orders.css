@@ -1,0 +1,131 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #f8fafc;
+    color: #172033;
+}
+
+.orders-navbar {
+    height: 80px;
+    padding: 0 8%;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 800;
+    text-decoration: none;
+    color: #172033;
+}
+
+.logo span {
+    color: #2563eb;
+}
+
+.orders-navbar > a:last-child {
+    text-decoration: none;
+    color: #2563eb;
+    font-weight: 600;
+}
+
+.orders-container {
+    width: 84%;
+    margin: 60px auto;
+}
+
+.orders-container h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.orders-container > p {
+    color: #64748b;
+    margin-bottom: 30px;
+}
+
+.order-card {
+    background: white;
+    padding: 25px;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.order-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+.order-header p {
+    font-size: 13px;
+    color: #64748b;
+    margin-top: 7px;
+}
+
+.order-product {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 15px 0;
+}
+
+.order-product img {
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+    background: #f8fafc;
+    padding: 5px;
+    border-radius: 8px;
+}
+
+.order-product h3 {
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.order-total {
+    border-top: 1px solid #e5e7eb;
+    padding-top: 15px;
+    margin-top: 20px;
+    font-weight: 800;
+    text-align: right;
+}
+
+.order-status {
+    color: #16a34a;
+    font-weight: 700;
+}
+
+.empty-orders {
+    background: white;
+    padding: 50px 20px;
+    text-align: center;
+    border-radius: 12px;
+    color: #64748b;
+}
+
+@media(max-width: 600px) {
+    .orders-container {
+        width: 92%;
+    }
+
+    .orders-navbar {
+        padding: 0 5%;
+    }
+}
